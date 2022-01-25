@@ -1,4 +1,12 @@
-var str = ['Qq', 'a', 'vbbb', 'sadfs'];
+let text =
+    'I love teaching and empowering people.\
+ I teach HTML, CSS, JS, React, Python.';
 
-console.log(str.splice(1, 3, 1));
-console.log(str);
+for (let i = 0; i < text.length; i++) {
+    if (text.charCodeAt(i) < 65 || text.charCodeAt(i) > 122) {
+        text = text.substr(0, i).concat(' ').concat(text.substring(i + 1, text.length));
+    }
+}
+
+const arr = text.split(' ');
+console.log(arr);
